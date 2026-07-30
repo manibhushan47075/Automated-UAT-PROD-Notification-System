@@ -68,3 +68,10 @@ def send_notifications(environment):
     print(f"Emails Sent        : {success_count}")
     print(f"Failed             : {failed_count}")
     print("=" * 55)
+
+    return {
+        "environment": environment,
+        "total": len(users),
+        "sent": success_count,
+        "failed": failed_count,
+    }

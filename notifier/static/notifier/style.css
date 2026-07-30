@@ -1,0 +1,361 @@
+/* ===========================
+   GOOGLE FONT
+=========================== */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Inter',sans-serif;
+    position:relative;
+    min-height:100vh;
+    overflow-x:hidden;
+    background:#f8fafc;
+}
+
+/* ===========================
+   PREMIUM BACKGROUND
+=========================== */
+
+body::before{
+
+    content:"";
+
+    position:fixed;
+
+    inset:0;
+
+    z-index:-2;
+
+    background:
+
+    radial-gradient(circle at 0% 0%,
+    rgba(59,130,246,.18) 0%,
+    transparent 32%),
+
+    radial-gradient(circle at 100% 0%,
+    rgba(236,72,153,.16) 0%,
+    transparent 30%),
+
+    radial-gradient(circle at 100% 100%,
+    rgba(239,68,68,.14) 0%,
+    transparent 32%),
+
+    radial-gradient(circle at 0% 100%,
+    rgba(99,102,241,.16) 0%,
+    transparent 32%),
+
+    radial-gradient(circle at 50% 50%,
+    rgba(45,212,191,.10) 0%,
+    transparent 40%),
+
+    #f8fafc;
+
+    filter:blur(70px);
+
+    animation:gradientMove 20s ease-in-out infinite alternate;
+
+}
+
+/* Extra transparent overlay */
+
+body::after{
+
+    content:"";
+
+    position:fixed;
+
+    inset:0;
+
+    z-index:-1;
+
+    background:rgba(255,255,255,.25);
+
+    backdrop-filter:blur(3px);
+
+}
+
+/* ===========================
+   ANIMATION
+=========================== */
+
+@keyframes gradientMove{
+
+0%{
+
+transform:scale(1)
+translate(0px,0px);
+
+}
+
+50%{
+
+transform:scale(1.08)
+translate(-20px,20px);
+
+}
+
+100%{
+
+transform:scale(1)
+translate(20px,-15px);
+
+}
+
+}
+
+/* ===========================
+   HEADER
+=========================== */
+
+.header-bar{
+
+    background:rgba(17,24,39,.88);
+
+    backdrop-filter:blur(18px);
+
+    -webkit-backdrop-filter:blur(18px);
+
+    border-bottom:1px solid rgba(255,255,255,.08);
+
+    box-shadow:0 12px 35px rgba(0,0,0,.12);
+
+    color:white;
+
+    padding:24px 0;
+
+}
+
+.header-bar h3{
+
+    font-weight:700;
+
+}
+
+.header-bar p{
+
+    opacity:.75;
+
+}
+
+/* ===========================
+   GLASS CARD
+=========================== */
+
+.env-card{
+
+    position:relative;
+
+    overflow:hidden;
+
+    background:rgba(255,255,255,.60);
+
+    backdrop-filter:blur(22px);
+
+    -webkit-backdrop-filter:blur(22px);
+
+    border:1px solid rgba(255,255,255,.55);
+
+    border-radius:22px;
+
+    padding:32px;
+
+    transition:.35s;
+
+    box-shadow:
+
+    0 15px 35px rgba(0,0,0,.08);
+
+}
+
+/* Gradient strip */
+
+.env-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    height:5px;
+
+    background:linear-gradient(90deg,#2563eb,#60a5fa);
+
+}
+
+.env-card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:
+
+    0 30px 60px rgba(0,0,0,.12);
+
+}
+
+/* ===========================
+   ICON
+=========================== */
+
+.env-icon{
+
+    width:65px;
+
+    height:65px;
+
+    border-radius:18px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    margin-bottom:18px;
+
+    backdrop-filter:blur(15px);
+
+}
+
+.env-card h5{
+
+    font-weight:700;
+
+    margin-bottom:10px;
+
+}
+
+.env-card p{
+
+    color:#64748b;
+
+    line-height:1.6;
+
+}
+
+/* ===========================
+   BUTTONS
+=========================== */
+
+.btn{
+
+    border:none;
+
+    border-radius:14px;
+
+    padding:14px;
+
+    font-weight:600;
+
+    transition:.30s;
+
+    letter-spacing:.2px;
+
+}
+
+.btn-primary{
+
+    background:linear-gradient(90deg,#2563eb,#3b82f6);
+
+}
+
+.btn-danger{
+
+    background:linear-gradient(90deg,#dc2626,#ef4444);
+
+}
+
+.btn:hover{
+
+    transform:translateY(-2px);
+
+    box-shadow:
+
+    0 12px 30px rgba(0,0,0,.15);
+
+}
+
+/* ===========================
+   SUMMARY BOX
+=========================== */
+
+.stat-box{
+
+    background:rgba(255,255,255,.60);
+
+    backdrop-filter:blur(18px);
+
+    border:1px solid rgba(255,255,255,.55);
+
+    border-radius:18px;
+
+    padding:22px;
+
+    transition:.3s;
+
+    box-shadow:
+
+    0 10px 30px rgba(0,0,0,.06);
+
+}
+
+.stat-box:hover{
+
+    transform:translateY(-4px);
+
+}
+
+.stat-number{
+
+    font-size:34px;
+
+    font-weight:700;
+
+}
+
+.stat-label{
+
+    font-size:13px;
+
+    text-transform:uppercase;
+
+    letter-spacing:1px;
+
+    color:#64748b;
+
+    margin-top:6px;
+
+}
+
+/* ===========================
+   SCROLLBAR
+=========================== */
+
+::-webkit-scrollbar{
+
+width:10px;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+background:#cbd5e1;
+
+border-radius:20px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+background:#94a3b8;
+
+}
